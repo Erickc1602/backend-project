@@ -7,11 +7,7 @@ const mongoose = require("mongoose");
 const authRoutes = require ('./routes/authRoutes')
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var bundesliga = require ('./routes/bundesliga')
-var laLiga = require ('./routes/laLiga')
-var prem = require ('./routes/prem')
-var serieA = require ('./routes/serieA')
+var tablesRoute = require('./routes/tables');
 
 //enviroment variables
 require('dotenv').config()
@@ -56,10 +52,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //ROUTES 
 app.use('/', indexRouter);
 app.use(authRoutes)
-app.use(bundesliga)
-app.use(prem)
-app.use(laLiga)
-app.use(serieA)
+app.use(tablesRoute)
 
 
 

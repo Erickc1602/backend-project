@@ -37,7 +37,7 @@ return errors;
 const maxAge = 3 * 24 * 60 * 60;
 
 const createToken = (id) => {
-    return jwt.sign({ id }, 'champions secret', {
+    return jwt.sign({ id }, 'wc secret', {
         expiresIn: maxAge
     })
 }
@@ -82,4 +82,10 @@ module.exports.signup_get = (req, res) => {
         res.status(400).json({ errors})
 
     }
+ }
+
+ module.exports.logout_get = (req,res) => {
+    res.cookie ('jwt', '', {maxAge: 1});
+    res.redirect('/')
+
  }
