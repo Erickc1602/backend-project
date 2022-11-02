@@ -12,11 +12,19 @@
 
 <button>Send Inf</button>
 
+<%stadium.forEach(stadium => {%>
+    <h1><%= stadium.stadiumName %></h1>
+    <h2> Capacity: <%= stadium.capacity %></h2>
+    <h2><%= stadium.pictureUrl %> </h2>
+
+<% }) %>
+
+
 </form>
 <script>
     const form = document.querySelector('form');
-
     form.addEventListener('submit', async (e) => {
+
         e.preventDefault();
     //GET Values
     const stadiumName = form.stadiumName.value;
@@ -31,6 +39,7 @@
         });
         const data = await res.json()
         console.log (data)
+        
         
     } catch (error) {
         console/log(error)

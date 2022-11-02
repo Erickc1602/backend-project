@@ -1,4 +1,4 @@
-
+<%- include('header') -%>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,8 +11,8 @@
 
     <%stadium.forEach(stadium => {%>
         <h1><%= stadium.stadiumName %></h1>
-        <h2> <%= stadium.capacity %></h2>
-        <img src="<%= stadium.pictureUrl %>" height="500px" width="500px">
+        <img src="<%= stadium.pictureUrl %>" height="500px" width="800px">
+        <h2> Capacity: <%= stadium.capacity %></h2>
 
    <% }) %>
 
