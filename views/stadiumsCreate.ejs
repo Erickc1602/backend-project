@@ -1,0 +1,44 @@
+<form>
+<h1>Create Stadiums</h1>
+
+<label for="stadiumName"> Stadium Name: </label>
+<input type="text" name="stadiumName">
+
+<label for="capacity"> Stadium Capacity: </label>
+<input type="text" name="capacity">
+
+<label for="pictureUrl"> Pic Url: </label>
+<input type="text" name="pictureUrl">
+
+<button>Send Inf</button>
+
+</form>
+<script>
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+    //GET Values
+    const stadiumName = form.stadiumName.value;
+    const capacity = form.capacity.value;
+    const pictureUrl = form.pictureUrl.value;
+    
+    try {
+        const res = await fetch('stadiumsCreate', {
+            method: 'POST',
+            body: JSON.stringify({stadiumName, capacity, pictureUrl}),
+            headers: {'Content-Type' : 'application/json'}
+        });
+        const data = await res.json()
+        console.log (data)
+        
+    } catch (error) {
+        console/log(error)
+        
+    }
+
+
+
+})
+
+</script>

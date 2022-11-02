@@ -21,6 +21,9 @@ const userSchema = new mongoose.Schema({
        minlength: [6, 'Minimum password length is 6 characters'],
      }
   });
+
+
+
   
   // fire a function before doc saved to db 
   userSchema.pre('save', async function(next) {
