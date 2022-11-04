@@ -2,19 +2,63 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <title>Document</title>
 </head>
-<body>
-    <nav>
-        <h1><a href="/">Qatar 2022</a></h1>
-        <ul>
-            <li><a href="/stadiums"> Stadiums</a></li>
-            <li><a href="/login" class="btn"> Log in</a></li>
-            <li><a href="/signup" class=""> Sign up</a></li>
-            <li> <a href="/logout">Log out</a></li>
-        </ul>
-    </nav>
+<body background="https://static.vecteezy.com/system/resources/previews/005/545/348/non_2x/football-qatar-2022-tournament-background-illustration-football-pattern-for-banner-card-website-burgundy-color-national-flag-qatar-world-cup-2022-vector.jpg">
+    
+    <nav style="height: 100px ; background-color: cornsilk;"  class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" >
+              <img src="https://i.ytimg.com/vi/5k3siHuJKOU/maxresdefault.jpg" style="height: 100px;" >
+            </a>
+        
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+
+        
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a href="/" class="navbar-item" style="color: crimson; font-size: 35px;">
+              Home
+            </a>
+      
+            <a href="/stadiums" class="navbar-item" style="color: crimson; font-size: 20px;">
+              Stadiums
+            </a>
+            <% if (user){ %>
+            <p style="font-size: 30px; margin-left: 100px; margin-top: 25px;"> Welcome <%= user.username %>! </p>
+            <%} else {}%>      
+            
+            </div>
+          </div>
+      
+          <div class="navbar-end">
+            
+            <div class="navbar-item">
+              <div class="buttons">
+                <a href="/signup" class="button ">
+                  <strong style="color: crimson;" >Sign up</strong>
+                </a>
+                <a style="color: crimson;" href="/login" class="button" >
+                  Log in
+                </a>
+
+                <a style="color: black;" href="/logout" class="button" >
+                  Log out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
     
 </body>
 </html>

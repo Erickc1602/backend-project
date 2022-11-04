@@ -1,28 +1,85 @@
-<%- include('header') -%>
+
 
 <html>
   <head>
-    <title> Soccer News</title>
+    <title> Qatar World Cup</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <%- include('header') -%>
 
+
+
+<div style="color: black;font-size: 30px;" class="container is-max-desktop">
+  
+  <div style="background-color: cornsilk; margin-top: 50px;"  class="notification">
+
+    <img src="" alt="">
+
+    <h2>Qatar gives fans all-expenses-paid trips to sing at the World Cup ceremony</h2>
+    <img src="https://media.npr.org/assets/img/2022/11/01/ap22299336665073_wide-1d04a82f30d11d9b75ab174ce00ceee4a1507dcf-s900-c85.webp" alt="">
+    <p style="font-size: 20px;">GENEVA — Up to 1,600 fans of the teams that qualified for this year's World Cup are being recruited for an all-expenses-paid trip to Qatar to sing in the opening ceremony and stay for at least two weeks promoting positive social media content about the soccer tournament and the host nation.</p>
+
+    <form>
+      <label for="comment"> Comment: </label>
+      <input type="text" name="comment">
+      
+      <button>Send comment</button>      
+    </form>
+
+  </div>
+  
+  <div style="color: black;font-size: 30px;" class="container is-max-desktop">
+  
+    <div style="background-color: cornsilk; margin-top: 50px;"  class="notification">
+  
+      <img src="" alt="">
+  
+      <h2>Brazil Head To Qatar As Favourites To Win A World Cup Like No Other</h2>
+      <img src=https://c.ndtvimg.com/2022-11/773ijj58_neymar-jr-brazil-afp_625x300_01_November_22.jpg?im=FeatureCrop,algorithm=dnn,width=806,height=605 alt="">
+      
+      <form>
+        <p style="font-size: 20px;">The first World Cup ever to be held in the Middle East will be unlike any that has come before, but there may still be a familiar name on the trophy with Brazil heading to Qatar as the favourites to succeed France and end two decades of European dominance</p>
+        <label for="comment"> Comment: </label>
+        <input type="text" name="comment">
+        
+        <button>Send comment</button>      
+      </form>
+      
+    </div>
+    
     
 
-    <h1> <%= %> </h1>
-    <p> </p>
+</div>
+<!-- <script>
+  const form = document.querySelector('form')
+ 
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-    <div>
-      <a href="/stadiums"><h2>Stadiums</h2> </a>
-      <p></p>
+    // get the values
+    const comment = form.comment.value;
     
-        <p> </p>
-    
-    
-      </div>
+    try {
+        const res = await fetch('index', {
+            method: 'POST',  
+            body: JSON.stringify({text}),
+            headers: {'Content-Type' : 'application/json'}
+        });
+        const data = await res.json()
+        console.log (data)
+
+        
+        
+    } catch (error) {
+        console/log(error)
+        
+    }
 
 
 
+})
+</script> -->
 
 
 

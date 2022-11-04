@@ -18,4 +18,27 @@ const Stadium = require('../models/stadiums');
     }
 }
 
+//UPDATE 
+
+exports.find = (req,res) =>{
+    Stadium.find()
+    .then(stadium => {
+        res.send(stadium)
+    })
+    .catch(err => {
+        res.status(500).send('ERROR')
+    })
+
+    module.exports.stadiums_update = (req,res) => {
+        if (req.body){
+            return res
+            .status(400)
+                .send('DATA TO UPDATE CANNOT Be empty')
+        }
+        const id = req.params.id;
+
+    }
+
+
+}
 

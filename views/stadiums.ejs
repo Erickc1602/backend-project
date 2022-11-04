@@ -7,14 +7,18 @@
     <title>Qatar Stadiums</title>
 </head>
 <body>
-    <h1>Qatar Stadiums</h1>
+    <h1 style="font-size:50px; text-align: center; color: black;">Qatar World Cup Stadiums</h1>
 
+<div class="container is-max-desktop">
     <%stadium.forEach(stadium => {%>
-        <h1><%= stadium.stadiumName %></h1>
-        <img src="<%= stadium.pictureUrl %>" height="500px" width="800px">
-        <h2> Capacity: <%= stadium.capacity %></h2>
-
+        <div style="background-color: cornsilk;"  class="notification">
+            <h1><%= stadium.stadiumName %></h1>
+            <img src="<%= stadium.pictureUrl %>" height="500px" width="800px">
+            <h2> Capacity: <%= stadium.capacity %></h2>
+           
+            
+          </div>
    <% }) %>
-
+</div>
 </body>
 </html>

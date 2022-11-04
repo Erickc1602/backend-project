@@ -6,7 +6,8 @@ var logger = require('morgan');
 const mongoose = require("mongoose");
 const authRoutes = require ('./routes/authRoutes')
 var indexRouter = require('./routes/index');
-const stadiumsRoute = require('./routes/stadiums')
+const stadiumsRoute = require('./routes/stadiums');
+const { checkUser, requireAuth } = require('./middleware/authMiddleware');
 
 //enviroment variables
 require('dotenv').config()
@@ -49,6 +50,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //ROUTES 
+app.get('*', checkUser)
 app.use(indexRouter);
 app.use(authRoutes);
 app.use(stadiumsRoute);
