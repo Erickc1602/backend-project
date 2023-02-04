@@ -1,9 +1,11 @@
 const mongoose = require ('mongoose')
+const User = require ('./User')
 
 
 const commentsSchema = new mongoose.Schema({
      author: {
-        type: String
+       type: mongoose.Schema.Types.ObjectId, ref: User
+
     },
     comment: {
         type: String

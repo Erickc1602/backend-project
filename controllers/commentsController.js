@@ -1,20 +1,21 @@
-const Comment = require ('../models/comments');
-
+const Comment = require("../models/Comments");
+const jwt = require("jsonwebtoken");
 
 // send Comment
 
 module.exports.comments_post = async (req, res) => {
-    const {author, comment} = req.body;
     
-    try{
-        const comments = await Comment.create ({author, comment})
-    res.status(201).json(comments)
-
-    }
-    catch(err){
-        console.log(err)
-        res.status(400).send('comment not send')
-
-    }
-}
+    try {
+        // Verify JWT, and saving JWT, author comes from JWT
+        const { comment } = req.body;
+      const author = await jwt.verify(req.cookies.jwt, "wc secret").id;
+      
+      //create comment in DB
+    const comments = await Comment.create({ author, comment });
+    res.redirect("/");
+  } catch (err) {
+    
+    res.status(400).send("Must be loged in to make a comment");
+  }
+};
 

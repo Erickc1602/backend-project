@@ -1,4 +1,4 @@
-const Stadium = require('../models/stadiums');
+const Stadium = require('../models/Stadiums');
 
 
  //CREATE STADIUMS DATA

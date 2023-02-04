@@ -20,15 +20,30 @@
     <img src="https://media.npr.org/assets/img/2022/11/01/ap22299336665073_wide-1d04a82f30d11d9b75ab174ce00ceee4a1507dcf-s900-c85.webp" alt="">
     <p style="font-size: 20px;">GENEVA — Up to 1,600 fans of the teams that qualified for this year's World Cup are being recruited for an all-expenses-paid trip to Qatar to sing in the opening ceremony and stay for at least two weeks promoting positive social media content about the soccer tournament and the host nation.</p>
 
-    <form>
+    <form action="/comments" method="POST">
       <label for="comment"> Comment: </label>
       <input type="text" name="comment">
       
-      <button>Send comment</button>      
+      <button type="submit">Send comment</button>      
     </form>
+    
 
-  </div>
-  
+      <%comments.forEach(comments => {%>
+
+      <h1>Username: <%= comments.author %> </h1>
+       <p> Comment: <%= comments.comment %> </p>      
+       <% }) %>
+
+       <td>
+        <a href=""></a>
+       </td>
+     
+    
+
+
+
+    </div>
+    
   <div style="color: black;font-size: 30px;" class="container is-max-desktop">
   
     <div style="background-color: cornsilk; margin-top: 50px;"  class="notification">

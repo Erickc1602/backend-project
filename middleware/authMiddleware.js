@@ -9,7 +9,7 @@ if(token){
  jwt.verify(token, 'wc secret', (err, decodedToken) => {
     if (err) {
         console.log(err.message)
-        res.redirect('/login')
+        res.redirect('/')
     }
     else{
         console.log(decodedToken)
@@ -18,7 +18,7 @@ if(token){
  })
 }
 else{
-    res.redirect('/login')
+    res.redirect('/')
 }
 }
 

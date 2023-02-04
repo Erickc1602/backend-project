@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const stadiumController = require ('../controllers/stadiumController');
-const Stadiums = require('../models/stadiums');
+const Stadiums = require('../models/Stadiums');
 
 
 
