@@ -1,8 +1,8 @@
 var express = require('express');
-const User = require('../models/User');
+const User = require('./models/User');
 var router = express.Router();
-const Comment = require ('../models/Comments')
-const commentController = require ('../controllers/commentsController')
+const Comment = require ('./models/Comments')
+const commentController = require ('./controllers/commentsController')
 
 
 router.post('/comments', commentController.comments_post);
