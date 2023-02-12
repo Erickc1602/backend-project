@@ -28,11 +28,12 @@
     </form>
     
 
-      <%comments.forEach(comments => {%>
-
-      <h1>Username: <%= comments.author %> </h1>
-       <p> Comment: <%= comments.comment %> </p>      
-       <% }) %>
+    <% comments.forEach(function(comment) { %>
+      <div class="comment">
+        <p>Author: <%= comment.author.username %></p>
+        <p>Comment: <%= comment.comment %></p>
+      </div>
+    <% }); %>
 
        <td>
         <a href=""></a>
@@ -55,10 +56,13 @@
       
       <form>
         <p style="font-size: 20px;">The first World Cup ever to be held in the Middle East will be unlike any that has come before, but there may still be a familiar name on the trophy with Brazil heading to Qatar as the favourites to succeed France and end two decades of European dominance</p>
-        <label for="comment"> Comment: </label>
-        <input type="text" name="comment">
+        <!-- <label for="comment"> Comment: </label> -->
+        <!-- <input type="text" name="comment">
         
-        <button>Send comment</button>      
+        <button>Send comment</button>     -->
+        
+     
+        
       </form>
       
     </div>

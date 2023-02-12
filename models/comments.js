@@ -10,9 +10,10 @@ const commentsSchema = new mongoose.Schema({
     comment: {
         type: String
     }
-
-
 }) 
+
+
+
 
 const Comment = mongoose.model('comments', commentsSchema);
 module.exports = Comment
