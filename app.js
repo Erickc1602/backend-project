@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require("mongoose");
 const authRoutes = require ('./routes/authRoutes')
-var indexRouter = require('./routes/index');
+var indexRouter = require('./index');
 const stadiumsRoute = require('./routes/stadiums');
 const { checkUser, requireAuth } = require('./middleware/authMiddleware');
 
